@@ -1,4 +1,105 @@
-.test {
-  font-size: 30px;
-  color: red;
+.signup-div {
+  display: flex;
+  align-items: center;
+  gap: 5.5rem;
+}
+
+.signup-right-div {
+  width: calc(100% - 736px);
+}
+
+.signup-right-container {
+  padding-right: 10rem;
+}
+.signup-title {
+  font-size: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  color: #141718;
+  line-height: 44px;
+}
+
+.signup-text {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  color: #6c7275;
+  line-height: 26px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.sign-in-text {
+  color: #38cb89;
+}
+.sign-up-label {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  color: #6c7275;
+  line-height: 26px;
+}
+
+.signup-input-div {
+  margin-bottom: 32px;
+  height: 40px;
+  border-bottom: 1px solid #e8ecef;
+  position: relative;
+}
+.sign-up-label {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  color: #6c7275;
+  line-height: 26px;
+  position: absolute;
+  top: 0;
+}
+.signup-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+.password-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.policy-text {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  color: #6c7275;
+  line-height: 26px;
+}
+.policy-div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.policy-span-text {
+  font-weight: 800;
+  color: #141718;
+}
+.signu-checkbox {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+  .signup-div {
+    flex-direction: column;
+  }
+  .signup-right-div {
+    width: 100%;
+  }
+  .signup-right-container {
+    width: 83%;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .policy-text {
+    /* font-family: "Times New Roman", Times, serif; */
+    font-weight: 200;
+  }
 }
