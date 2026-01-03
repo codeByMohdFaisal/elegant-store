@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useRef } from "react";
 import "./HomePage.css";
-// import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
-// import "@coreui/coreui/dist/css/coreui.min.css";
+import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
+import "@coreui/coreui/dist/css/coreui.min.css";
 import HomePageHeader from "../components/home-pages/header/HomePageHeader";
 import SecondaryBtn from "../components/buttons/SecondaryBtn";
 import AuthenticationBtn from "../components/buttons/AuthenticationBtn";
@@ -30,7 +30,7 @@ const HomePage = () => {
         <NavigationMenu targetFadedBgRef={targetFadedBgRef} />
       </div>
       <div className="home-page-container">
-        {/* <div className="home-page-carousel">
+        <div className="home-page-carousel">
           <CCarousel controls indicators>
             <CCarouselItem>
               <CImage
@@ -61,7 +61,7 @@ const HomePage = () => {
               />
             </CCarouselItem>
           </CCarousel>
-        </div> */}
+        </div>
         <div className="carousel-content-div">
           <p className="left-carousel-content heading-72">
             Simply Unique<span className="carousel-content-left-span">/</span>{" "}
@@ -113,13 +113,13 @@ const HomePage = () => {
                   <Image
                     src={"/images/newtag.png"}
                     alt="50% off"
-                    fill
-                    priority
+                    width={100}
+                    height={100}
                   />
                   <Image
                     src={"/images/wishlist.png"}
-                    fill
-                    priority
+                    width={100}
+                    height={100}
                     alt="wishlist-icon"
                   />
                 </div>
@@ -130,8 +130,8 @@ const HomePage = () => {
               <div className="product-description-div">
                 <Image
                   src={"/images/ratings.png"}
-                  fill
-                  priority
+                  width={100}
+                  height={100}
                   alt="ratings"
                   className="ratings-img"
                 />
@@ -154,8 +154,8 @@ const HomePage = () => {
                 <div className="card-header">
                   <Image
                     src={"/images/newtag.png"}
-                    fill
-                    priority
+                    width={100}
+                    height={100}
                     alt="new tag"
                   />
                 </div>
@@ -163,8 +163,8 @@ const HomePage = () => {
               <div className="product-description-div">
                 <Image
                   src={"/images/ratings.png"}
-                  fill
-                  priority
+                  width={100}
+                  height={100}
                   alt="ratings"
                   className="ratings-img"
                 />
@@ -186,8 +186,8 @@ const HomePage = () => {
                 <div className="card-header">
                   <Image
                     src={"/images/newtag.png"}
-                    fill
-                    priority
+                    width={100}
+                    height={100}
                     alt="new tag"
                   />
                 </div>
@@ -195,8 +195,8 @@ const HomePage = () => {
               <div className="product-description-div">
                 <Image
                   src={"/images/ratings.png"}
-                  fill
-                  priority
+                  width={100}
+                  height={100}
                   alt="ratings"
                   className="ratings-img"
                 />
@@ -220,8 +220,8 @@ const HomePage = () => {
                 <div className="card-header">
                   <Image
                     src={"/images/newtag.png"}
-                    fill
-                    priority
+                    width={100}
+                    height={100}
                     alt="new tag"
                   />
                 </div>
@@ -229,8 +229,8 @@ const HomePage = () => {
               <div className="product-description-div">
                 <Image
                   src={"/images/ratings.png"}
-                  fill
-                  priority
+                  width={100}
+                  height={100}
                   alt="ratings"
                   className="ratings-img"
                 />
@@ -252,8 +252,8 @@ const HomePage = () => {
                 <div className="card-header">
                   <Image
                     src={"/images/newtag.png"}
-                    fill
-                    priority
+                    width={100}
+                    height={100}
                     alt="new tag"
                   />
                 </div>
@@ -261,8 +261,8 @@ const HomePage = () => {
               <div className="product-description-div">
                 <Image
                   src={"/images/ratings.png"}
-                  fill
-                  priority
+                  width={100}
+                  height={100}
                   alt="ratings"
                   className="ratings-img"
                 />
@@ -284,8 +284,8 @@ const HomePage = () => {
                 <div className="card-header">
                   <Image
                     src={"/images/newtag.png"}
-                    fill
-                    priority
+                    width={100}
+                    height={100}
                     alt="new tag"
                   />
                 </div>
@@ -293,8 +293,8 @@ const HomePage = () => {
               <div className="product-description-div">
                 <Image
                   src={"/images/ratings.png"}
-                  fill
-                  priority
+                  width={100}
+                  height={100}
                   alt="ratings"
                   className="ratings-img"
                 />
@@ -320,8 +320,8 @@ const HomePage = () => {
               <Image
                 className="feature-card-img"
                 src={"/images/fast-delivery.svg"}
-                fill
-                priority
+                width={100}
+                height={100}
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">Free Shipping</p>
@@ -335,8 +335,8 @@ const HomePage = () => {
               <Image
                 className="feature-card-img"
                 src={"/images/money.svg"}
-                fill
-                priority
+                width={100}
+                height={100}
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">Money-back</p>
@@ -350,8 +350,8 @@ const HomePage = () => {
               <Image
                 className="feature-card-img"
                 src={"/images/lock 01.svg"}
-                fill
-                priority
+                width={100}
+                height={100}
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">Secure Payments</p>
@@ -365,8 +365,8 @@ const HomePage = () => {
               <Image
                 className="feature-card-img"
                 src={"/images/call.svg"}
-                fill
-                priority
+                width={100}
+                height={100}
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">24/7 Support</p>
@@ -381,8 +381,8 @@ const HomePage = () => {
         <div className="banner-img-div">
           <Image
             src={"/images/banner-sofa.png"}
-            fill
-            priority
+            width={100}
+            height={100}
             alt="banner-ad"
           />
         </div>
@@ -409,8 +409,8 @@ const HomePage = () => {
               <Image
                 className="article-card-img"
                 src={"/images/article-1.png"}
-                fill
-                priority
+                width={100}
+                height={100}
                 alt="article-card"
               />
               <p className="article-card-title heading-16">
@@ -422,8 +422,8 @@ const HomePage = () => {
               <Image
                 className="article-card-img"
                 src={"/images/article-2.png"}
-                fill
-                priority
+                width={100}
+                height={100}
                 alt="article-card"
               />
               <p className="article-card-title heading-16">
@@ -435,8 +435,8 @@ const HomePage = () => {
               <Image
                 className="article-card-img"
                 src={"/images/article-3.png"}
-                fill
-                priority
+                width={100}
+                height={100}
                 alt="article-card"
               />
               <p className="article-card-title heading-16">
