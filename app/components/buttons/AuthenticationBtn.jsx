@@ -1,4 +1,3 @@
-import React from "react";
 import "./all-btn.css";
 const AuthenticationBtn = ({ text }) => {
   return (

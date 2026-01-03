@@ -1,5 +1,5 @@
-import React from "react";
-import breadCrumbArrow from "../../../assets/images/breadcrumb-arrow.svg";
+import breadCrumbArrow from "/images/breadcrumb-arrow.svg";
+import Image from "next/image";
 import "./Breadcrumb.css";
 
 const Breadcrumb = () => {
@@ -7,25 +7,31 @@ const Breadcrumb = () => {
     <ul className="header-breadcrumb">
       <li className="header-breadcrumb-item">
         <p className="header-breadcrumb-label">Home</p>
-        <img
+        <Image
           className="header-breadcrumb-icon"
           src={breadCrumbArrow}
+          fill
+          priority
           alt="header-breadcrumb arrow"
         />
       </li>
       <li className="header-breadcrumb-item">
         <p className="header-breadcrumb-label">Shop</p>
-        <img
+        <Image
           className="header-breadcrumb-icon"
           src={breadCrumbArrow}
+          fill
+          priority
           alt="header-breadcrumb arrow"
         />
       </li>
       <li className="header-breadcrumb-item">
         <p className="header-breadcrumb-label">Living Room</p>
-        <img
+        <Image
           className="header-breadcrumb-icon"
           src={breadCrumbArrow}
+          fill
+          priority
           alt="header-breadcrumb arrow"
         />
       </li>
@@ -33,9 +39,11 @@ const Breadcrumb = () => {
         <p className="header-breadcrumb-label selected-header-breadcrumb-label">
           Product
         </p>
-        <img
+        <Image
           className="header-breadcrumb-icon"
           src={breadCrumbArrow}
+          fill
+          priority
           alt="header-breadcrumb arrow"
         />
       </li>

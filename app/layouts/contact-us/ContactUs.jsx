@@ -1,6 +1,4 @@
-import React from "react";
-import contactUsImg from "../../assets/images/banner-img-2.png";
-import email from "../../assets/images/email.svg";
+import Image from "next/image";
 
 const ContactUs = () => {
   return (
@@ -8,7 +6,7 @@ const ContactUs = () => {
       <div
         className="contact-us-container common-centered-img-properties"
         style={{
-          backgroundImage: `url(${contactUsImg})`,
+          backgroundImage: `url(${"/images/banner-img-2.png"})`,
         }}
       >
         <div className="contact-us-desc">
@@ -20,7 +18,7 @@ const ContactUs = () => {
             <input className="cu-email-input" type="text" />
             <div className="cu-sign-up-div">
               <div className="email-img-div">
-                <img src={email} alt="email" />
+                <Image fill priority src={"/images/email.svg"} alt="email" />
 
                 <p className="input-text text-16-regular">Email address</p>
               </div>

@@ -1,32 +1,15 @@
-import React, { useRef } from "react";
+"use client";
+import Image from "next/image";
+import { useRef } from "react";
 import "./HomePage.css";
-import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
-import "@coreui/coreui/dist/css/coreui.min.css";
-import HomePageHeader from "../../components/home-pages/header/HomePageHeader";
-import banner1 from "../../assets/images/carousel-slide-1.png";
-import banner2 from "../../assets/images/carousel-slide-2.jpg";
-import banner3 from "../../assets/images/carousel-slide-3.jpg";
-import banner4 from "../../assets/images/carousel-slide-4.jpg";
-import newTag from "../../assets/images/newtag.png";
-import ratings from "../../assets/images/ratings.png";
-import wishlistIcon from "../../assets/images/wishlist.png";
-import cardImg1 from "../../assets/images/new-arrival-sofa.png";
-import cardImg2 from "../../assets/images/table-lamp.png";
-import cardImg3 from "../../assets/images/beige-table-lamp.png";
-import cardImg4 from "../../assets/images/bamboo-basket.png";
-import featureIcon1 from "../../assets/images/fast-delivery.svg";
-import featureIcon2 from "../../assets/images/money.svg";
-import featureIcon3 from "../../assets/images/lock 01.svg";
-import featureIcon4 from "../../assets/images/call.svg";
-import bannerSofa from "../../assets/images/banner-sofa.png";
-import articleImg1 from "../../assets/images/article-1.png";
-import articleImg2 from "../../assets/images/article-2.png";
-import articleImg3 from "../../assets/images/article-3.png";
-import SecondaryBtn from "../../components/buttons/SecondaryBtn";
-import AuthenticationBtn from "../../components/buttons/AuthenticationBtn";
-import NavigationMenu from "../../components/home-pages/navigation-menu/NavigationMenu";
-import Footer from "../../components/home-pages/footer/Footer";
-import ContactUs from "../../layouts/contact-us/ContactUs";
+// import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
+// import "@coreui/coreui/dist/css/coreui.min.css";
+import HomePageHeader from "../components/home-pages/header/HomePageHeader";
+import SecondaryBtn from "../components/buttons/SecondaryBtn";
+import AuthenticationBtn from "../components/buttons/AuthenticationBtn";
+import NavigationMenu from "../components/home-pages/navigation-menu/NavigationMenu";
+import Footer from "../components/home-pages/footer/Footer";
+import ContactUs from "../layouts/contact-us/ContactUs";
 
 const HomePage = () => {
   const targetFadedBgRef = useRef(null);
@@ -47,38 +30,38 @@ const HomePage = () => {
         <NavigationMenu targetFadedBgRef={targetFadedBgRef} />
       </div>
       <div className="home-page-container">
-        <div className="home-page-carousel">
+        {/* <div className="home-page-carousel">
           <CCarousel controls indicators>
             <CCarouselItem>
               <CImage
                 className="carousel-img d-block w-100"
-                src={banner1}
+                src={"/images/carousel-slide-1.png"}
                 alt="slide 1"
               />
             </CCarouselItem>
             <CCarouselItem>
               <CImage
                 className="carousel-img d-block w-100"
-                src={banner2}
+                src={"/images/carousel-slide-2.jpg"}
                 alt="slide 2"
               />
             </CCarouselItem>
             <CCarouselItem>
               <CImage
                 className="carousel-img d-block w-100"
-                src={banner3}
+                src={"/images/carousel-slide-3.jpg"}
                 alt="slide 3"
               />
             </CCarouselItem>
             <CCarouselItem>
               <CImage
                 className="carousel-img d-block w-100"
-                src={banner4}
+                src={"/images/carousel-slide-4.jpg"}
                 alt="slide 3"
               />
             </CCarouselItem>
           </CCarousel>
-        </div>
+        </div> */}
         <div className="carousel-content-div">
           <p className="left-carousel-content heading-72">
             Simply Unique<span className="carousel-content-left-span">/</span>{" "}
@@ -123,19 +106,35 @@ const HomePage = () => {
               <div
                 className="new-arival-product-card common-centered-img-properties"
                 style={{
-                  backgroundImage: `url(${cardImg1})`,
+                  backgroundImage: `url(${"/images/new-arrival-sofa.png"})`,
                 }}
               >
                 <div className="card-header">
-                  <img src={newTag} alt="50% off" />
-                  <img src={wishlistIcon} alt="wishlist-icon" />
+                  <Image
+                    src={"/images/newtag.png"}
+                    alt="50% off"
+                    fill
+                    priority
+                  />
+                  <Image
+                    src={"/images/wishlist.png"}
+                    fill
+                    priority
+                    alt="wishlist-icon"
+                  />
                 </div>
                 <div className="card-btn-div">
                   <AuthenticationBtn text={"Add to cart"} />
                 </div>
               </div>
               <div className="product-description-div">
-                <img src={ratings} alt="ratings" className="ratings-img" />
+                <Image
+                  src={"/images/ratings.png"}
+                  fill
+                  priority
+                  alt="ratings"
+                  className="ratings-img"
+                />
                 <p className="product-name text-16-semi-bold">Loveseat Sofa</p>
                 <div className="product-pricing-div">
                   <p className="actual-product-pricing text-16-semi-bold">
@@ -149,15 +148,26 @@ const HomePage = () => {
               <div
                 className="new-arival-product-card common-centered-img-properties"
                 style={{
-                  backgroundImage: `url(${cardImg2})`,
+                  backgroundImage: `url(${"/images/table-lamp.png"})`,
                 }}
               >
                 <div className="card-header">
-                  <img src={newTag} alt="new tag" />
+                  <Image
+                    src={"/images/newtag.png"}
+                    fill
+                    priority
+                    alt="new tag"
+                  />
                 </div>
               </div>
               <div className="product-description-div">
-                <img src={ratings} alt="ratings" className="ratings-img" />
+                <Image
+                  src={"/images/ratings.png"}
+                  fill
+                  priority
+                  alt="ratings"
+                  className="ratings-img"
+                />
                 <p className="product-name text-16-semi-bold">Table Lamp</p>
                 <div className="product-pricing-div">
                   <p className="actual-product-pricing text-16-semi-bold">
@@ -170,15 +180,26 @@ const HomePage = () => {
               <div
                 className="new-arival-product-card common-centered-img-properties"
                 style={{
-                  backgroundImage: `url(${cardImg3})`,
+                  backgroundImage: `url(${"/images/beige-table-lamp.png"})`,
                 }}
               >
                 <div className="card-header">
-                  <img src={newTag} alt="new tag" />
+                  <Image
+                    src={"/images/newtag.png"}
+                    fill
+                    priority
+                    alt="new tag"
+                  />
                 </div>
               </div>
               <div className="product-description-div">
-                <img src={ratings} alt="ratings" className="ratings-img" />
+                <Image
+                  src={"/images/ratings.png"}
+                  fill
+                  priority
+                  alt="ratings"
+                  className="ratings-img"
+                />
                 <p className="product-name text-16-semi-bold">
                   Beige Table Lamp
                 </p>
@@ -193,15 +214,26 @@ const HomePage = () => {
               <div
                 className="new-arival-product-card common-centered-img-properties"
                 style={{
-                  backgroundImage: `url(${cardImg4})`,
+                  backgroundImage: `url(${"/images/bamboo-basket.png"})`,
                 }}
               >
                 <div className="card-header">
-                  <img src={newTag} alt="new tag" />
+                  <Image
+                    src={"/images/newtag.png"}
+                    fill
+                    priority
+                    alt="new tag"
+                  />
                 </div>
               </div>
               <div className="product-description-div">
-                <img src={ratings} alt="ratings" className="ratings-img" />
+                <Image
+                  src={"/images/ratings.png"}
+                  fill
+                  priority
+                  alt="ratings"
+                  className="ratings-img"
+                />
                 <p className="product-name text-16-semi-bold">Bamboo basket</p>
                 <div className="product-pricing-div">
                   <p className="actual-product-pricing text-16-semi-bold">
@@ -214,15 +246,26 @@ const HomePage = () => {
               <div
                 className="new-arival-product-card common-centered-img-properties"
                 style={{
-                  backgroundImage: `url(${cardImg2})`,
+                  backgroundImage: `url(${"/images/table-lamp.png"})`,
                 }}
               >
                 <div className="card-header">
-                  <img src={newTag} alt="new tag" />
+                  <Image
+                    src={"/images/newtag.png"}
+                    fill
+                    priority
+                    alt="new tag"
+                  />
                 </div>
               </div>
               <div className="product-description-div">
-                <img src={ratings} alt="ratings" className="ratings-img" />
+                <Image
+                  src={"/images/ratings.png"}
+                  fill
+                  priority
+                  alt="ratings"
+                  className="ratings-img"
+                />
                 <p className="product-name text-16-semi-bold">Table Lamp</p>
                 <div className="product-pricing-div">
                   <p className="actual-product-pricing text-16-semi-bold">
@@ -235,15 +278,26 @@ const HomePage = () => {
               <div
                 className="new-arival-product-card common-centered-img-properties"
                 style={{
-                  backgroundImage: `url(${cardImg4})`,
+                  backgroundImage: `url(${"/images/bamboo-basket.png"})`,
                 }}
               >
                 <div className="card-header">
-                  <img src={newTag} alt="new tag" />
+                  <Image
+                    src={"/images/newtag.png"}
+                    fill
+                    priority
+                    alt="new tag"
+                  />
                 </div>
               </div>
               <div className="product-description-div">
-                <img src={ratings} alt="ratings" className="ratings-img" />
+                <Image
+                  src={"/images/ratings.png"}
+                  fill
+                  priority
+                  alt="ratings"
+                  className="ratings-img"
+                />
                 <p className="product-name text-16-semi-bold">Bamboo basket</p>
                 <div className="product-pricing-div">
                   <p className="actual-product-pricing text-16-semi-bold">
@@ -263,9 +317,11 @@ const HomePage = () => {
         <div className="home-page-container parent-features-div">
           <div className="feature-card">
             <div className="feature-card-inside-div">
-              <img
+              <Image
                 className="feature-card-img"
-                src={featureIcon1}
+                src={"/images/fast-delivery.svg"}
+                fill
+                priority
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">Free Shipping</p>
@@ -276,9 +332,11 @@ const HomePage = () => {
           </div>
           <div className="feature-card">
             <div className="feature-card-inside-div">
-              <img
+              <Image
                 className="feature-card-img"
-                src={featureIcon2}
+                src={"/images/money.svg"}
+                fill
+                priority
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">Money-back</p>
@@ -289,9 +347,11 @@ const HomePage = () => {
           </div>
           <div className="feature-card">
             <div className="feature-card-inside-div">
-              <img
+              <Image
                 className="feature-card-img"
-                src={featureIcon3}
+                src={"/images/lock 01.svg"}
+                fill
+                priority
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">Secure Payments</p>
@@ -302,9 +362,11 @@ const HomePage = () => {
           </div>
           <div className="feature-card">
             <div className="feature-card-inside-div">
-              <img
+              <Image
                 className="feature-card-img"
-                src={featureIcon4}
+                src={"/images/call.svg"}
+                fill
+                priority
                 alt="feature-icon"
               />
               <p className="feature-card-title heading-20">24/7 Support</p>
@@ -317,7 +379,12 @@ const HomePage = () => {
       </section>
       <section className="banner-ad-section">
         <div className="banner-img-div">
-          <img src={bannerSofa} alt="banner-ad" />
+          <Image
+            src={"/images/banner-sofa.png"}
+            fill
+            priority
+            alt="banner-ad"
+          />
         </div>
         <div className="banner-desc-div">
           <p className="banner-sale heading-20">SALE UP TO 35% OFF</p>
@@ -339,9 +406,11 @@ const HomePage = () => {
           </div>
           <div className="article-cards-parent">
             <div className="article-card">
-              <img
+              <Image
                 className="article-card-img"
-                src={articleImg1}
+                src={"/images/article-1.png"}
+                fill
+                priority
                 alt="article-card"
               />
               <p className="article-card-title heading-16">
@@ -350,9 +419,11 @@ const HomePage = () => {
               <SecondaryBtn btnText="Read more" arrowColor="#141718" />
             </div>
             <div className="article-card">
-              <img
+              <Image
                 className="article-card-img"
-                src={articleImg2}
+                src={"/images/article-2.png"}
+                fill
+                priority
                 alt="article-card"
               />
               <p className="article-card-title heading-16">
@@ -361,9 +432,11 @@ const HomePage = () => {
               <SecondaryBtn btnText="Read more" arrowColor="#141718" />
             </div>
             <div className="article-card">
-              <img
+              <Image
                 className="article-card-img"
-                src={articleImg3}
+                src={"/images/article-3.png"}
+                fill
+                priority
                 alt="article-card"
               />
               <p className="article-card-title heading-16">

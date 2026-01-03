@@ -1,8 +1,4 @@
-import React from "react";
-import companyWhiteLogo from "../../../assets/images/white-logo.svg";
-import instagram from "../../../assets/images/instagram.svg";
-import facebook from "../../../assets/images/facebook.svg";
-import youTube from "../../../assets/images/youtube.svg";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -10,7 +6,12 @@ const Footer = () => {
       <div className="home-page-container">
         <div className="hp-footer-menu">
           <div className="hp-footer-menu-left-div">
-            <img src={companyWhiteLogo} alt="company-logo" />
+            <Image
+              fill
+              priority
+              src={"/images/white-logo.svg"}
+              alt="company-logo"
+            />
             <div className="hp-footer-center-line"></div>
             <p className="hp-footer-store-name">Gift & Decoration Store</p>
           </div>
@@ -31,9 +32,14 @@ const Footer = () => {
             <p className="privacy-policy">Terms of Use</p>
           </div>
           <div className="hp-copyright-right-div">
-            <img src={instagram} alt="instagram" />
-            <img src={facebook} alt="facebook" />
-            <img src={youTube} alt="you tube" />
+            <Image
+              fill
+              priority
+              src={"/images/instagram.svg"}
+              alt="instagram"
+            />
+            <Image fill priority src={"/images/facebook.svg"} alt="facebook" />
+            <Image fill priority src={"/images/youtube.svg"} alt="you tube" />
           </div>
         </div>
       </div>

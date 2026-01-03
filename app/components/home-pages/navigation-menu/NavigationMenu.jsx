@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-import companyLogo from "../../../assets/images/company-logo.png";
-import mobMenuIcon from "../../../assets/images/mob-menu.svg";
-import searchIcon from "../../../assets/images/search 02.png";
-import profileIcon from "../../../assets/images/user-circle.png";
-import cartIcon from "../../../assets/images/Cart Button.png";
-import OutsideClickHandler from "react-outside-click-handler";
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+// import OutsideClickHandler from "react-outside-click-handler";
 import CartModal from "../../modal/cart-modal/CartModal";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const NavigationMenu = ({ targetFadedBgRef }) => {
   const [openCartModal, setOpenCartModal] = useState(false);
@@ -22,11 +19,22 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
     <>
       <div className="home-page-top-section">
         <div className="mob-menu-parent">
-          <img className="mob-menu-icon" src={mobMenuIcon} alt="mob-menu" />
-          <img src={companyLogo} alt="company-logo" />
+          <Image
+            className="mob-menu-icon"
+            src={"/images/mob-menu.svg"}
+            alt="mob-menu"
+            fill
+            priority
+          />
+          <Image
+            src={"/images/company-logo.png"}
+            fill
+            priority
+            alt="company-logo"
+          />
         </div>
 
-        <nav className="home-page-nav">
+        {/* <nav className="home-page-nav">
           <ul className="navbar-parent">
             <li>
               <Link
@@ -77,26 +85,40 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
               </Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
         <div className="navbar-icons">
-          <img className="navbar-icon" src={searchIcon} alt="search-icon" />
-          <img className="navbar-icon" src={profileIcon} alt="profile-icon" />
-          <img
+          <Image
+            className="navbar-icon"
+            src={"/images/search 02.png"}
+            alt="search-icon"
+            fill
+            priority
+          />
+          <Image
+            className="navbar-icon"
+            src={"/images/user-circle.png"}
+            alt="profile-icon"
+            fill
+            priority
+          />
+          <Image
             className="cart-icon"
-            src={cartIcon}
+            src={"/images/cart-button.png"}
             alt="cart-icon"
+            fill
+            priority
             onClick={(e) => handleCartModal(e, !openCartModal)}
           />
         </div>
       </div>
-      <OutsideClickHandler
+      {/* <OutsideClickHandler
         onOutsideClick={() => {
           setOpenCartModal(false);
           targetFadedBgRef?.current?.classList.remove("faded-bg-for-modal");
         }}
       >
         <CartModal openCartModal={openCartModal} />
-      </OutsideClickHandler>
+      </OutsideClickHandler> */}
     </>
   );
 };

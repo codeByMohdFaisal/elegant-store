@@ -1,5 +1,3 @@
-import React from "react";
-
 const SecondaryBtn = ({ btnText, arrowColor }) => {
   return (
     <div
@@ -22,23 +20,23 @@ const SecondaryBtn = ({ btnText, arrowColor }) => {
         <path
           d="M3.75 9H14.25"
           stroke={arrowColor}
-          stroke-width="1.125"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.125"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M9.75 13.5L14.25 9"
           stroke={arrowColor}
-          stroke-width="1.125"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.125"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M9.75 4.5L14.25 9"
           stroke={arrowColor}
-          stroke-width="1.125"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.125"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>

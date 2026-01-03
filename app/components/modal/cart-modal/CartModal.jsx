@@ -1,11 +1,5 @@
-import React from "react";
+import Image from "next/image";
 import "./CartModal.css";
-import cartModalImg1 from "../../../assets/images/cart-modal-img-1.png";
-import cartModalImg2 from "../../../assets/images/cart-modal-img-2.png";
-import cartModalImg3 from "../../../assets/images/cart-modal-img-3.png";
-import cartModalCross from "../../../assets/images/cart-modal-cross.svg";
-import cartModalPlus from "../../../assets/images/cart-modal-plus.svg";
-import cartModalMinus from "../../../assets/images/cart-modal-minus.svg";
 import AuthenticationBtn from "../../buttons/AuthenticationBtn";
 
 const CartModal = ({ openCartModal }) => {
@@ -21,7 +15,7 @@ const CartModal = ({ openCartModal }) => {
           <div className="product-main-div">
             <div className="product-parent-product-desc-div">
               <div className="cart-modal-product-img">
-                <img src={cartModalImg1} alt="item" />
+                <Image fill src={"/images/cart-modal-img-1.png"} alt="item" />
               </div>
               <div className="cart-modal-product-desc">
                 <p className="cart-modal-product-name">Tray Table</p>
@@ -29,45 +23,53 @@ const CartModal = ({ openCartModal }) => {
                   Color : Black
                 </p>
                 <div className="cart-modal-quantity-selector">
-                  <img src={cartModalMinus} alt="minus" />
+                  <Image
+                    fill
+                    src={"/images/cart-modal-minus.svg"}
+                    alt="minus"
+                  />
                   <p className="cart-modal-number-of-product">2</p>
-                  <img src={cartModalPlus} alt="plus" />
+                  <Image fill src={"/images/cart-modal-plus.svg"} alt="plus" />
                 </div>
               </div>
             </div>
             <div className="cart-modal-price-div">
               <p className="cart-modal-price">$299.00</p>
               <div className="cart-modal-cross-img-div">
-                <img src={cartModalCross} alt="plus" />
+                <Image fill src={"/images/cart-modal-cross.svg"} alt="plus" />
               </div>
             </div>
           </div>
           <div className="product-main-div">
             <div className="product-parent-product-desc-div">
               <div className="cart-modal-product-img">
-                <img src={cartModalImg2} alt="item" />
+                <Image fill src={"/images/cart-modal-img-2.png"} alt="item" />
               </div>
               <div className="cart-modal-product-desc">
                 <p className="cart-modal-product-name">Tray Table</p>
                 <p className="cart-modal-product-color-heading">Color : Red</p>
                 <div className="cart-modal-quantity-selector">
-                  <img src={cartModalMinus} alt="minus" />
+                  <Image
+                    fill
+                    src={"/images/cart-modal-minus.svg"}
+                    alt="minus"
+                  />
                   <p className="cart-modal-number-of-product">4</p>
-                  <img src={cartModalPlus} alt="plus" />
+                  <Image fill src={"/images/cart-modal-plus.svg"} alt="plus" />
                 </div>
               </div>
             </div>
             <div className="cart-modal-price-div">
               <p className="cart-modal-price">$499.00</p>
               <div className="cart-modal-cross-img-div">
-                <img src={cartModalCross} alt="plus" />
+                <Image fill src={"/images/cart-modal-cross.svg"} alt="plus" />
               </div>
             </div>
           </div>
           <div className="product-main-div">
             <div className="product-parent-product-desc-div">
               <div className="cart-modal-product-img">
-                <img src={cartModalImg3} alt="item" />
+                <Image fill src={"/images/cart-modal-img-3.png"} alt="item" />
               </div>
               <div className="cart-modal-product-desc">
                 <p className="cart-modal-product-name">Table Lamp</p>
@@ -75,16 +77,20 @@ const CartModal = ({ openCartModal }) => {
                   Color : Green
                 </p>
                 <div className="cart-modal-quantity-selector">
-                  <img src={cartModalMinus} alt="minus" />
+                  <Image
+                    fill
+                    src={"/images/cart-modal-minus.svg"}
+                    alt="minus"
+                  />
                   <p className="cart-modal-number-of-product">1</p>
-                  <img src={cartModalPlus} alt="plus" />
+                  <Image fill src={"/images/cart-modal-plus.svg"} alt="plus" />
                 </div>
               </div>
             </div>
             <div className="cart-modal-price-div">
               <p className="cart-modal-price">$99.00</p>
               <div className="cart-modal-cross-img-div">
-                <img src={cartModalCross} alt="plus" />
+                <Image fill src={"/images/cart-modal-cross.svg"} alt="plus" />
               </div>
             </div>
           </div>
