@@ -1,9 +1,7 @@
-import React from "react";
+"use client";
+import Image from "next/image";
 import "./sign-up.css";
-import webChairImg from "../../assets/images/web-sign-in-chair.png";
-import mobChairImg from "../../assets/images/mob-sign-in-chair.png";
 import AuthenticationBtn from "../../components/buttons/AuthenticationBtn";
-import companyLogo from "../../assets/images/company-logo.png";
 import { useState } from "react";
 
 const SignUp = () => {
@@ -27,20 +25,29 @@ const SignUp = () => {
     <div className="signup-div">
       <div className="signup-left-div">
         <div className="signup-left-img-div">
-          <img
+          <Image
             className="signup-left-div-img web-sign-img"
-            src={webChairImg}
+            src={"/images/web-sign-in-chair.png"}
+            fill
+            priority
             alt="chair"
           />
-          <img
+          <Image
             className="signup-left-div-img mob-sign-img"
-            src={mobChairImg}
+            src={"/images/mob-sign-in-chair.png"}
+            fill
+            priority
             alt="chair"
           />
         </div>
 
         <div className="logo-div">
-          <img src={companyLogo} alt="company-logo" />
+          <Image
+            src={"/images/company-logo.png"}
+            fill
+            priority
+            alt="company-logo"
+          />
         </div>
       </div>
       <div className="signup-right-div">
