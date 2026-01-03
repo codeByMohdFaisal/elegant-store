@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import "../../../home-page/HomePage.css";
 import { useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import CartModal from "../../modal/cart-modal/CartModal";

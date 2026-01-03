@@ -1,25 +1,53 @@
 import Image from "next/image";
 import "./RatingBox.css";
-import whiteStar from "../../assets/images/white-star.svg";
-import blackStar from "../../assets/images/black-star.svg";
 
 const RatingBox = () => {
   return (
     <div className="rating-div">
       <div className="rating-img-div">
-        <Image fill className="rating-img" src={blackStar} alt="black-star" />
+        <Image
+          width={100}
+          height={100}
+          className="rating-img"
+          src="/images/black-star.svg"
+          alt="black-star"
+        />
       </div>
       <div className="rating-img-div">
-        <Image fill className="rating-img" src={blackStar} alt="black-star" />
+        <Image
+          width={100}
+          height={100}
+          className="rating-img"
+          src="/images/black-star.svg"
+          alt="black-star"
+        />
       </div>
       <div className="rating-img-div">
-        <Image fill className="rating-img" src={blackStar} alt="black-star" />
+        <Image
+          width={100}
+          height={100}
+          className="rating-img"
+          src="/images/black-star.svg"
+          alt="black-star"
+        />
       </div>
       <div className="rating-img-div">
-        <Image fill className="rating-img" src={blackStar} alt="black-star" />
+        <Image
+          width={100}
+          height={100}
+          className="rating-img"
+          src="/images/black-star.svg"
+          alt="black-star"
+        />
       </div>
       <div className="rating-img-div">
-        <Image fill className="rating-img" src={whiteStar} alt="white-star" />
+        <Image
+          width={100}
+          height={100}
+          className="rating-img"
+          src="/images/white-star.svg"
+          alt="white-star"
+        />
       </div>
     </div>
   );

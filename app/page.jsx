@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRef } from "react";
-import "../app/home-page/HomePage.css";
+import "./home-page/HomePage.css";
 import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
 import HomePageHeader from "../app/components/home-pages/header/HomePageHeader";

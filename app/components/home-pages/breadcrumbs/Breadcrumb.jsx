@@ -1,4 +1,3 @@
-import breadCrumbArrow from "/images/breadcrumb-arrow.svg";
 import Image from "next/image";
 import "./Breadcrumb.css";
 
@@ -9,9 +8,9 @@ const Breadcrumb = () => {
         <p className="header-breadcrumb-label">Home</p>
         <Image
           className="header-breadcrumb-icon"
-          src={breadCrumbArrow}
-          fill
-          priority
+          src={"/images/breadcrumb-arrow.svg"}
+          width={20}
+          height={20}
           alt="header-breadcrumb arrow"
         />
       </li>
@@ -19,9 +18,9 @@ const Breadcrumb = () => {
         <p className="header-breadcrumb-label">Shop</p>
         <Image
           className="header-breadcrumb-icon"
-          src={breadCrumbArrow}
-          fill
-          priority
+          src={"/images/breadcrumb-arrow.svg"}
+          width={20}
+          height={20}
           alt="header-breadcrumb arrow"
         />
       </li>
@@ -29,9 +28,9 @@ const Breadcrumb = () => {
         <p className="header-breadcrumb-label">Living Room</p>
         <Image
           className="header-breadcrumb-icon"
-          src={breadCrumbArrow}
-          fill
-          priority
+          src={"/images/breadcrumb-arrow.svg"}
+          width={20}
+          height={20}
           alt="header-breadcrumb arrow"
         />
       </li>
@@ -41,9 +40,9 @@ const Breadcrumb = () => {
         </p>
         <Image
           className="header-breadcrumb-icon"
-          src={breadCrumbArrow}
-          fill
-          priority
+          src={"/images/breadcrumb-arrow.svg"}
+          width={20}
+          height={20}
           alt="header-breadcrumb arrow"
         />
       </li>

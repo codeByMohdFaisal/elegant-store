@@ -1,37 +1,14 @@
+"use client";
+import Image from "next/image";
 import React, { useRef } from "react";
 import "./ProductDetails.css";
-import HomePageHeader from "../../components/home-pages/header/HomePageHeader";
-import NavigationMenu from "../../components/home-pages/navigation-menu/NavigationMenu";
-import ContactUs from "../../layouts/contact-us/ContactUs";
-import Footer from "../../components/home-pages/footer/Footer";
-import Breadcrumb from "../../components/home-pages/breadcrumbs/Breadcrumb";
-import AuthenticationBtn from "../../components/buttons/AuthenticationBtn";
-import productImg1 from "../../assets/images/product-detail-img1.png";
-import productImg2 from "../../assets/images/product-detail-img2.png";
-import productImg3 from "../../assets/images/product-detail-img3.png";
-import productImg4 from "../../assets/images/product-detail-img4.png";
-import carouselRightArrow from "../../assets/images/carousel-arrow-right.svg";
-import carouselLeftArrow from "../../assets/images/carousel-arrow-left.svg";
-import rightArrowIcon from "../../assets/images/choose-color-right-arrow.svg";
-import relatedColorImg1 from "../../assets/images/product-detail-img5.png";
-import relatedColorImg2 from "../../assets/images/product-detail-img6.png";
-import relatedColorImg3 from "../../assets/images/product-detail-img7.png";
-import relatedColorImg4 from "../../assets/images/product-detail-img8.png";
-import wishlistBtnIcon from "../../assets/images/btn-wishlist-icon.svg";
-import minusIcon from "../../assets/images/quantity-minus-icon.svg";
-import plusIcon from "../../assets/images/quantity-plus-icon.svg";
-import AngryEmoji from "../../assets/images/angryEmoji.svg";
-import laughingEmoji from "../../assets/images/laughingEmoji.svg";
-import smileyEmoji from "../../assets/images/smileyEmoji.svg";
-import okEmoji from "../../assets/images/okEmoji.svg";
-import heartEmoji from "../../assets/images/heartEmoji.svg";
-import handEmoji from "../../assets/images/handEmoji.svg";
-import profileImg1 from "../../assets/images/profile-pic1.png";
-import profileImg2 from "../../assets/images/profile-pic2.png";
-import profileImg3 from "../../assets/images/profile-pic3.png";
-import profileImg4 from "../../assets/images/profile-pic4.png";
-import profileImg5 from "../../assets/images/profile-pic5.png";
-import RatingBox from "../../components/ratings/RatingBox";
+import HomePageHeader from "../components/home-pages/header/HomePageHeader";
+import NavigationMenu from "../components/home-pages/navigation-menu/NavigationMenu";
+import ContactUs from "../layouts/contact-us/ContactUs";
+import Footer from "../components/home-pages/footer/Footer";
+import Breadcrumb from "../components/home-pages/breadcrumbs/Breadcrumb";
+import AuthenticationBtn from "../components/buttons/AuthenticationBtn";
+import RatingBox from "../components/ratings/RatingBox";
 
 const ProductDetails = () => {
   const targetFadedBgRef = useRef(null);
@@ -59,10 +36,12 @@ const ProductDetails = () => {
           <div className="product-details-img-desc-parent-div">
             <div className="product-details-images">
               <div className="product-details-main-img-div">
-                <img
+                <Image
                   className="product-details-main-img"
-                  src={productImg1}
+                  src="/images/product-detail-img1.png"
                   alt="img-1"
+                  width={100}
+                  height={100}
                 />
                 <div className="new-tag-div">
                   <div className="new-tag">
@@ -74,41 +53,51 @@ const ProductDetails = () => {
                 </div>
                 <div className="carousel-parent-div">
                   <div className="carousel-left-arrow-img-div">
-                    <img
+                    <Image
                       className="carousel-left-arrow-img"
-                      src={carouselLeftArrow}
+                      src="/images/carousel-arrow-left.svg"
                       alt="carousel-left-arrow"
+                      width={100}
+                      height={100}
                     />
                   </div>
                   <div className="carousel-left-arrow-img-div">
-                    <img
+                    <Image
                       className="carousel-right-arrow-img"
-                      src={carouselRightArrow}
+                      src="/images/carousel-arrow-right.svg"
                       alt="carousel-right-arrow"
+                      width={100}
+                      height={100}
                     />
                   </div>
                 </div>
               </div>
               <div className="product-other-related-images">
                 <div className="product-related-image-div">
-                  <img
+                  <Image
                     className="product-related-image"
-                    src={productImg2}
+                    src="/images/product-detail-img2.png"
                     alt="img-2"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="product-related-image-div">
-                  <img
+                  <Image
                     className="product-related-image"
-                    src={productImg3}
+                    src="/images/product-detail-img3.png"
                     alt="img-3"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="product-related-image-div">
-                  <img
+                  <Image
                     className="product-related-image"
-                    src={productImg4}
+                    src="/images/product-detail-img4.png"
                     alt="img-4"
+                    width={100}
+                    height={100}
                   />
                 </div>
               </div>
@@ -173,59 +162,78 @@ const ProductDetails = () => {
                 <p className="measurement-title-desc">17 1/2x20 5/8 "</p>
                 <div className="product-choose-color-heading-div">
                   <p className="product-choose-color-heading">Choose Color</p>
-                  <img src={rightArrowIcon} alt="right-arrow" />
+                  <Image
+                    src="/images/choose-color-right-arrow.svg"
+                    alt="right-arrow"
+                    width={100}
+                    height={100}
+                  />
                 </div>
                 <p className="product-color-name">Black</p>
                 <div className="product-images-color-div">
                   <div className="color-image-div">
-                    <img
-                      src={relatedColorImg1}
+                    <Image
+                      src="/images/product-detail-img5.png"
                       className="color-image"
                       alt="color-img-1"
+                      width={100}
+                      height={100}
                     />
                   </div>
                   <div className="color-image-div">
-                    <img
-                      src={relatedColorImg2}
+                    <Image
+                      src="/images/product-detail-img6.png"
                       className="color-image"
                       alt="color-img-2"
+                      width={100}
+                      height={100}
                     />
                   </div>
                   <div className="color-image-div">
-                    <img
-                      src={relatedColorImg3}
+                    <Image
+                      src="/images/product-detail-img7.png"
                       className="color-image"
                       alt="color-img-3"
+                      width={100}
+                      height={100}
                     />
                   </div>
                   <div className="color-image-div">
-                    <img
-                      src={relatedColorImg4}
+                    <Image
+                      src="/images/product-detail-img8.png"
                       className="color-image"
                       alt="color-img-4"
+                      width={100}
+                      height={100}
                     />
                   </div>
                 </div>
                 <div className="product-quantity-selector-parent-div">
                   <div className="quantity-wishlist-parent">
                     <div className="quantity-selector">
-                      <img
-                        src={plusIcon}
+                      <Image
+                        src="/images/quantity-plus-icon.svg"
                         className="quantity-selector-minus-icon"
                         alt="minus-icon"
+                        width={100}
+                        height={100}
                       />
                       <p className="quantity-selector-text">1</p>
-                      <img
-                        src={minusIcon}
+                      <Image
+                        src="/images/quantity-minus-icon.svg"
                         className="quantity-selector-plus-icon"
                         alt="plus-icon"
+                        width={100}
+                        height={100}
                       />
                     </div>
                     <button className="wishllist-btn">
-                      <img
-                        src={wishlistBtnIcon}
+                      <Image
+                        src="/images/btn-wishlist-icon.svg"
                         className="wishlist-btn-icon"
                         alt="wishlist-btn-icon"
+                        width={100}
+                        height={100}
                       />
                       Wishlist
                     </button>
@@ -305,10 +313,12 @@ const ProductDetails = () => {
             <div className="customer-reviews-listing-div">
               <div className="customer-reviews-list-div">
                 <div className="customer-img-name-parent-div">
-                  <img
+                  <Image
                     className="customer-profile-img"
-                    src={profileImg2}
+                    src="/images/profile-pic2.png"
                     alt="profile-img"
+                    width={100}
+                    height={100}
                   />
                   <div className="customer-reviews-list-right-div">
                     <p className="customer-review-list-title">Sofia Harvetz</p>
@@ -333,10 +343,12 @@ const ProductDetails = () => {
               </div>
               <div className="customer-reviews-list-div">
                 <div className="customer-img-name-parent-div">
-                  <img
+                  <Image
                     className="customer-profile-img"
-                    src={profileImg3}
+                    src="/images/profile-pic3.png"
                     alt="profile-img"
+                    width={100}
+                    height={100}
                   />
                   <div className="customer-reviews-list-right-div">
                     <p className="customer-review-list-title">Sofia Harvetz</p>
@@ -348,7 +360,7 @@ const ProductDetails = () => {
                 <div className="review-desc-parent-div">
                   <p className="customer-review-list-comment">
                     I bought it 3 weeks ago and now come back just to say
-                    “Awesome Product”. I really enjoy it. At vero eos et
+                    "Awesome Product". I really enjoy it. At vero eos et
                     accusamus et iusto odio dignissimos ducimus qui blanditiis
                     praesentium voluptatum deleniti atque corrupt et quas
                     molestias excepturi sint non provident.
@@ -361,10 +373,12 @@ const ProductDetails = () => {
               </div>
               <div className="customer-reviews-list-div">
                 <div className="customer-img-name-parent-div">
-                  <img
+                  <Image
                     className="customer-profile-img"
-                    src={profileImg4}
+                    src="/images/profile-pic4.png"
                     alt="profile-img"
+                    width={100}
+                    height={100}
                   />
                   <div className="customer-reviews-list-right-div">
                     <p className="customer-review-list-title">Sofia Harvetz</p>
@@ -376,7 +390,7 @@ const ProductDetails = () => {
                 <div className="review-desc-parent-div">
                   <p className="customer-review-list-comment">
                     I bought it 3 weeks ago and now come back just to say
-                    “Awesome Product”. I really enjoy it. At vero eos et
+                    "Awesome Product". I really enjoy it. At vero eos et
                     accusamus et iusto odio dignissimos ducimus qui blanditiis
                     praesentium voluptatum deleniti atque corrupt et quas
                     molestias excepturi sint non provident.
@@ -389,10 +403,12 @@ const ProductDetails = () => {
               </div>
               <div className="customer-reviews-list-div">
                 <div className="customer-img-name-parent-div">
-                  <img
+                  <Image
                     className="customer-profile-img"
-                    src={profileImg5}
+                    src="/images/profile-pic5.png"
                     alt="profile-img"
+                    width={100}
+                    height={100}
                   />
                   <div className="customer-reviews-list-right-div">
                     <p className="customer-review-list-title">Sofia Harvetz</p>

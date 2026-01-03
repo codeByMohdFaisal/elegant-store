@@ -18,7 +18,12 @@ const ContactUs = () => {
             <input className="cu-email-input" type="text" />
             <div className="cu-sign-up-div">
               <div className="email-img-div">
-                <Image fill priority src={"/images/email.svg"} alt="email" />
+                <Image
+                  width={100}
+                  height={100}
+                  src={"/images/email.svg"}
+                  alt="email"
+                />
 
                 <p className="input-text text-16-regular">Email address</p>
               </div>
