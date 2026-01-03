@@ -91,13 +91,13 @@
   background-position: center;
 }
 .left-product-div {
-  /* background-image: url(../../assets/images/living-room-sofa.png); */
+  background-image: url(/images/living-room-sofa.png);
 }
 .right-product-sub-div1 {
-  /* background-image: url(../../assets/images/bedroom-drawer.png); */
+  background-image: url(/images/bedroom-drawer.png);
 }
 .right-product-sub-div2 {
-  /* background-image: url(../../assets/images/toaster.png); */
+  background-image: url(/images/toaster.png);
 }
 .home-page-products-section {
   display: grid;

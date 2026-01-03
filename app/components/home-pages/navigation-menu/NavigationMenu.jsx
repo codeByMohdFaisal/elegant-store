@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-// import OutsideClickHandler from "react-outside-click-handler";
+import OutsideClickHandler from "react-outside-click-handler";
 import CartModal from "../../modal/cart-modal/CartModal";
-// import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const NavigationMenu = ({ targetFadedBgRef }) => {
   const [openCartModal, setOpenCartModal] = useState(false);
@@ -23,18 +23,20 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
             className="mob-menu-icon"
             src={"/images/mob-menu.svg"}
             alt="mob-menu"
-            fill
+            width={100}
+            height={100}
             priority
           />
           <Image
             src={"/images/company-logo.png"}
-            fill
+            width={100}
+            height={100}
             priority
             alt="company-logo"
           />
         </div>
 
-        {/* <nav className="home-page-nav">
+        <nav className="home-page-nav">
           <ul className="navbar-parent">
             <li>
               <Link
@@ -43,7 +45,7 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
                     ? "selected-nav-items"
                     : ""
                 }`}
-                to={"/home-page"}
+                href={"/home-page"}
               >
                 Home
               </Link>
@@ -55,7 +57,7 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
                     ? "selected-nav-items"
                     : ""
                 }`}
-                to={"/"}
+                href={"/"}
               >
                 Shop
               </Link>
@@ -67,7 +69,7 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
                     ? "selected-nav-items"
                     : ""
                 }`}
-                to={"/product-details"}
+                href={"/product-details"}
               >
                 Products
               </Link>
@@ -79,46 +81,46 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
                     ? "selected-nav-items"
                     : ""
                 }`}
-                to={"/"}
+                href={"/"}
               >
                 Contact Us
               </Link>
             </li>
           </ul>
-        </nav> */}
+        </nav>
         <div className="navbar-icons">
           <Image
             className="navbar-icon"
             src={"/images/search 02.png"}
             alt="search-icon"
-            fill
-            priority
+            width={100}
+            height={100}
           />
           <Image
             className="navbar-icon"
             src={"/images/user-circle.png"}
             alt="profile-icon"
-            fill
-            priority
+            width={100}
+            height={100}
           />
           <Image
             className="cart-icon"
             src={"/images/cart-button.png"}
             alt="cart-icon"
-            fill
-            priority
+            width={100}
+            height={100}
             onClick={(e) => handleCartModal(e, !openCartModal)}
           />
         </div>
       </div>
-      {/* <OutsideClickHandler
+      <OutsideClickHandler
         onOutsideClick={() => {
           setOpenCartModal(false);
           targetFadedBgRef?.current?.classList.remove("faded-bg-for-modal");
         }}
       >
         <CartModal openCartModal={openCartModal} />
-      </OutsideClickHandler> */}
+      </OutsideClickHandler>
     </>
   );
 };

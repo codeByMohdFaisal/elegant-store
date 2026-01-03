@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="hp-footer-menu">
           <div className="hp-footer-menu-left-div">
             <Image
-              fill
-              priority
+              width={100}
+              height={100}
               src={"/images/white-logo.svg"}
               alt="company-logo"
             />
@@ -33,13 +33,23 @@ const Footer = () => {
           </div>
           <div className="hp-copyright-right-div">
             <Image
-              fill
-              priority
+              width={100}
+              height={100}
               src={"/images/instagram.svg"}
               alt="instagram"
             />
-            <Image fill priority src={"/images/facebook.svg"} alt="facebook" />
-            <Image fill priority src={"/images/youtube.svg"} alt="you tube" />
+            <Image
+              width={100}
+              height={100}
+              src={"/images/facebook.svg"}
+              alt="facebook"
+            />
+            <Image
+              width={100}
+              height={100}
+              src={"/images/youtube.svg"}
+              alt="you tube"
+            />
           </div>
         </div>
       </div>

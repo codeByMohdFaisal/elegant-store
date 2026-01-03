@@ -11,7 +11,12 @@ const HomePageHeader = ({ bgColor, textColor, ntfText }) => {
       }}
     >
       <div className="notification-container">
-        <Image src={"/images/ticket-percent.png"} fill alt="ticket-percent" />
+        <Image
+          src={"/images/ticket-percent.png"}
+          width={100}
+          height={20}
+          alt="ticket-percent"
+        />
         <p style={{ color: textColor }} className="ntf-text text-14-semi-bold">
           {ntfText}
         </p>
