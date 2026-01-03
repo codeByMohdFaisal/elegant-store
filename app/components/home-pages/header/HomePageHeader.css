@@ -1,0 +1,23 @@
+.home-page-header {
+  position: sticky;
+}
+.notification-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding-block: 8px;
+  position: relative;
+}
+
+.ntf-cross-icon-div {
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+@media (max-width: 1200px) {
+  .secondary-btn-div {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./authentication-btn.css";
+import "./all-btn.css";
 const AuthenticationBtn = ({ text }) => {
   return (
     <button className="authentication-btn" type="button">

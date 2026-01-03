@@ -1,0 +1,22 @@
+.header-breadcrumb {
+  display: flex;
+  gap: 16px;
+  margin-block: 16px;
+}
+.header-breadcrumb .header-breadcrumb-item {
+  display: flex;
+  gap: 4px;
+}
+
+.header-breadcrumb-label {
+  cursor: pointer;
+  color: #605f5f;
+  font-weight: var(--normal-fw);
+  font-size: var(--text-fs-12);
+  line-height: 20px;
+  font-family: var(--secondary-ff);
+  margin-bottom: 0;
+}
+.selected-header-breadcrumb-label {
+  color: #121212;
+}
