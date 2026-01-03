@@ -1,15 +1,15 @@
 "use client";
 import Image from "next/image";
 import { useRef } from "react";
-import "./HomePage.css";
+import "../app/home-page/HomePage.css";
 import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
-import HomePageHeader from "../components/home-pages/header/HomePageHeader";
-import SecondaryBtn from "../components/buttons/SecondaryBtn";
-import AuthenticationBtn from "../components/buttons/AuthenticationBtn";
-import NavigationMenu from "../components/home-pages/navigation-menu/NavigationMenu";
-import Footer from "../components/home-pages/footer/Footer";
-import ContactUs from "../layouts/contact-us/ContactUs";
+import HomePageHeader from "../app/components/home-pages/header/HomePageHeader";
+import SecondaryBtn from "../app/components/buttons/SecondaryBtn";
+import AuthenticationBtn from "../app/components/buttons/AuthenticationBtn";
+import NavigationMenu from "../app/components/home-pages/navigation-menu/NavigationMenu";
+import Footer from "../app/components/home-pages/footer/Footer";
+import ContactUs from "../app/layouts/contact-us/ContactUs";
 
 const HomePage = () => {
   const targetFadedBgRef = useRef(null);

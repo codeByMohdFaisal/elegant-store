@@ -11,7 +11,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -27,7 +27,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/pages/sign-in/index.jsx"
+    "app/pages/sign-in/index.jsx",
+    ".next/dev/types/**/*.ts",
+    "app/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

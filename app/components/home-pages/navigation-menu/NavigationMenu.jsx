@@ -4,8 +4,10 @@ import { useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import CartModal from "../../modal/cart-modal/CartModal";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavigationMenu = ({ targetFadedBgRef }) => {
+  const pathname = usePathname();
   const [openCartModal, setOpenCartModal] = useState(false);
   const handleCartModal = (e, val) => {
     setOpenCartModal(val);
@@ -41,9 +43,7 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
             <li>
               <Link
                 className={`navbar-items ${
-                  window.location.pathname.includes("home-page")
-                    ? "selected-nav-items"
-                    : ""
+                  pathname.includes("home-page") ? "selected-nav-items" : ""
                 }`}
                 href={"/home-page"}
               >
@@ -53,9 +53,7 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
             <li>
               <Link
                 className={`navbar-items ${
-                  window.location.pathname.includes("shop")
-                    ? "selected-nav-items"
-                    : ""
+                  pathname.includes("shop") ? "selected-nav-items" : ""
                 }`}
                 href={"/"}
               >
@@ -65,7 +63,7 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
             <li>
               <Link
                 className={`navbar-items ${
-                  window.location.pathname.includes("product-details")
+                  pathname.includes("product-details")
                     ? "selected-nav-items"
                     : ""
                 }`}
@@ -77,9 +75,7 @@ const NavigationMenu = ({ targetFadedBgRef }) => {
             <li>
               <Link
                 className={`navbar-items ${
-                  window.location.pathname.includes("contact-us")
-                    ? "selected-nav-items"
-                    : ""
+                  pathname.includes("contact-us") ? "selected-nav-items" : ""
                 }`}
                 href={"/"}
               >
