@@ -1,42 +1,37 @@
-.signup-div {
-  display: flex;
-  height: 100vh;
+.elegant-container {
+  max-width: 1440px;
+  margin: auto;
+}
+.authenticate-main-sec {
+  display: grid;
+  grid-template-columns: 736px 1fr;
+  width: 100%;
+  height: 100%;
 }
 
-.signup-left-div {
-  width: 51%;
+.signup-left-sec {
+  width: 100%;
   position: relative;
-  background-color: #f3f5f7;
-  height: 100%;
+  background: #f3f5f7;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-.signup-left-img-div {
-  width: 100%;
-}
-.signup-left-div-img {
-  width: 100%;
-}
-.logo-div {
+
+.company-logo-container {
   position: absolute;
   top: 32px;
-  right: 50%;
-  transform: translateX(50%);
+  width: 105px;
+  height: 24px;
 }
+
 .signup-img-left {
   width: 100%;
   height: 100%;
 }
-.signup-right-div {
-  width: 49%;
-  display: flex;
-  align-items: center;
-  padding-left: 5.5rem;
-}
 
 .signup-right-div-parent {
-  width: 74%;
+  padding: 220px 88px 0px 88px;
 }
 
 .signup-title {
@@ -82,7 +77,6 @@
   font-size: 16px;
   font-family: var(--primary-ff);
   font-weight: 400;
-  /* color: #6c7275; */
   line-height: 26px;
 }
 .password-field {
@@ -146,49 +140,22 @@
 .mob-sign-img {
   display: none;
 }
-
-@media (max-width: 1000px) {
-  .signup-right-div-parent {
-    width: 95%;
-  }
-  .signup-right-div {
-    padding-left: 2.5rem;
-  }
+.sign-up-chair-img {
+  position: unset !important;
 }
 
-@media screen and (max-width: 768px) {
-  .web-sign-img {
-    display: none;
-  }
-  .mob-sign-img {
-    display: block;
-    height: 100%;
-  }
-  .signup-left-div-img {
-    width: unset;
-  }
-  .signup-left-img-div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .signup-div {
-    flex-direction: column;
-  }
-  .signup-left-div {
-    width: 100%;
-    height: 375px;
-  }
-  .signup-right-div {
-    width: 100%;
-    padding-left: 0px;
+@media screen and (max-width: 1200px) {
+  .authenticate-main-sec {
+    grid-template-columns: 1fr;
   }
   .signup-right-div-parent {
-    width: 83%;
-    margin-inline: auto;
-    padding-top: 40px;
+    padding: 40px 32px 80px 32px;
+  }
+  .signup-left-sec {
+    height: 100vh;
+  }
+  .chair-img-container {
+    height: 100vh;
   }
   .policy-text {
     font-weight: 200;

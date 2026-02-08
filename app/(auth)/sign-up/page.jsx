@@ -1,12 +1,11 @@
 "use client";
+import "../sign-up/sign-up.css";
 import Image from "next/image";
-import "./sign-up.css";
 import AuthenticationBtn from "../../components/buttons/AuthenticationBtn";
 import { useState } from "react";
+import Link from "next/link";
 
 const SignUp = () => {
-  const [nameVal, setNameVal] = useState("");
-  const [usernameVal, setUsernameVal] = useState("");
   const [passwordVal, setPasswordVal] = useState("");
   const [emailVal, setEmailVal] = useState("");
   const handlePassword = (e) => {
@@ -15,76 +14,46 @@ const SignUp = () => {
   const handleEmail = (e) => {
     setEmailVal(e.target.value);
   };
-  const handleUsername = (e) => {
-    setUsernameVal(e.target.value);
-  };
-  const handleName = (e) => {
-    setNameVal(e.target.value);
-  };
   return (
-    <div className="signup-div">
-      <div className="signup-left-div">
-        <div className="signup-left-img-div">
-          <Image
-            className="signup-left-div-img web-sign-img"
-            src={"/images/web-sign-in-chair.png"}
-            fill
-            priority
-            alt="chair"
-          />
-          <Image
-            className="signup-left-div-img mob-sign-img"
-            src={"/images/mob-sign-in-chair.png"}
-            fill
-            priority
-            alt="chair"
-          />
+    <div className="elegant-container">
+      <div className="authenticate-main-sec">
+        <div className="signup-left-sec">
+          <div className="chair-img-container">
+            <Image
+              className="sign-up-chair-img"
+              src={"/images/web-sign-in-chair.png"}
+              fill
+              alt="chair"
+            />
+          </div>
+          <div className="company-logo-container">
+            <Image
+              className=""
+              src={"/images/company-logo.png"}
+              fill
+              alt="company-logo"
+            />
+          </div>
         </div>
-
-        <div className="logo-div">
-          <Image
-            src={"/images/company-logo.png"}
-            fill
-            priority
-            alt="company-logo"
-          />
-        </div>
-      </div>
-      <div className="signup-right-div">
         <div className="signup-right-div-parent">
-          <h4 className="signup-title">Sign up</h4>
+          <h4 className="signup-title">Sign Up</h4>
           <p className="signup-text">
-            Already have an account?{" "}
-            <span className="sign-in-text">Sign in</span>
+            Already have an accout{" "}
+            <Link href={"/sign-in"} className="sign-in-text">
+              Sign In
+            </Link>
           </p>
           <div className="signup-form">
             <div className="signup-input-div">
               <input
-                className="signup-input name-input"
-                type="text"
-                value={nameVal}
-                onChange={handleName}
-                placeholder="Your name"
-              />
-            </div>
-            <div className="signup-input-div">
-              <input
-                className="signup-input username-input"
-                type="text"
-                value={usernameVal}
-                onChange={handleUsername}
-                placeholder="Username"
-              />
-            </div>
-            <div className="signup-input-div">
-              <input
                 className="signup-input email-input"
-                type="email"
+                type="text"
                 value={emailVal}
                 onChange={handleEmail}
-                placeholder="Email address"
+                placeholder="Your username or email address"
               />
             </div>
+
             <div className="signup-input-div password-field">
               <input
                 className="signup-input password-input"
@@ -113,16 +82,17 @@ const SignUp = () => {
                 />
               </svg>
             </div>
+
+            <div className="policy-div">
+              <input className="signu-checkbox" type="checkbox" />
+              <p className="policy-text">
+                I agree with{" "}
+                <span className="policy-span-text">Privacy Policy</span> and{" "}
+                <span className="policy-span-text">Terms of Use</span>
+              </p>
+            </div>
+            <AuthenticationBtn text={"Sign in"} />
           </div>
-          <div className="policy-div">
-            <input className="signu-checkbox" type="checkbox" />
-            <p className="policy-text">
-              I agree with{" "}
-              <span className="policy-span-text">Privacy Policy</span> and{" "}
-              <span className="policy-span-text">Terms of Use</span>
-            </p>
-          </div>
-          <AuthenticationBtn text={"Sign up"} />
         </div>
       </div>
     </div>

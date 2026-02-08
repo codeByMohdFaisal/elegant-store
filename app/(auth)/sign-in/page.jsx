@@ -3,6 +3,7 @@ import "../sign-up/sign-up.css";
 import Image from "next/image";
 import AuthenticationBtn from "../../components/buttons/AuthenticationBtn";
 import { useState } from "react";
+import Link from "next/link";
 
 const SignIn = () => {
   const [passwordVal, setPasswordVal] = useState("");
@@ -14,40 +15,33 @@ const SignIn = () => {
     setEmailVal(e.target.value);
   };
   return (
-    <div className="signup-div">
-      <div className="signup-left-div">
-        <div className="signup-left-img-div">
-          <Image
-            className="signup-left-div-img web-sign-img"
-            src={"/images/web-sign-in-chair.png"}
-            fill
-            priority
-            alt="chair"
-          />
-          <Image
-            className="signup-left-div-img mob-sign-img"
-            src={"/images/mob-sign-in-chair.png"}
-            fill
-            priority
-            alt="chair"
-          />
+    <div className="elegant-container">
+      <div className="authenticate-main-sec">
+        <div className="signup-left-sec">
+          <div className="chair-img-container">
+            <Image
+              className="sign-up-chair-img"
+              src={"/images/web-sign-in-chair.png"}
+              fill
+              alt="chair"
+            />
+          </div>
+          <div className="company-logo-container">
+            <Image
+              className=""
+              src={"/images/company-logo.png"}
+              fill
+              alt="company-logo"
+            />
+          </div>
         </div>
-
-        <div className="logo-div">
-          <Image
-            src={"/images/company-logo.png"}
-            fill
-            priority
-            alt="company-logo"
-          />
-        </div>
-      </div>
-      <div className="signup-right-div">
         <div className="signup-right-div-parent">
           <h4 className="signup-title">Sign in</h4>
           <p className="signup-text">
             Don’t have an accout yet?{" "}
-            <span className="sign-in-text">Sign Up</span>
+            <Link href={"/sign-up"} className="sign-in-text">
+              Sign Up
+            </Link>
           </p>
           <div className="signup-form">
             <div className="signup-input-div">
